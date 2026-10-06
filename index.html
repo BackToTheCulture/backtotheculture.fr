@@ -3,135 +3,264 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Back To The Culture — ta collection pop culture sur une vraie étagère</title>
-<meta name="description" content="BD, comics, mangas, films, séries, DVD, jeux vidéo et cartes Pokémon ou Magic : Back To The Culture range toute ta pop culture sur une étagère qui ressemble à la tienne. Une app éditée par LACUNA.">
+<title>Back To The Culture — la pop culture de deux 90's kids</title>
+<meta name="description" content="Back To The Culture : des vidéos sur le ciné, les séries et les jeux vidéo par deux 90's kids, des débats avec ceux qui les font, et une app pour ranger ta collection sur de vraies étagères. Édité par LACUNA.">
 <link rel="canonical" href="https://backtotheculture.fr/">
 <meta property="og:title" content="Back To The Culture">
-<meta property="og:description" content="Ta collection BD, mangas, films, jeux et cartes, rangée sur une vraie étagère.">
+<meta property="og:description" content="La pop culture de deux 90's kids : vidéos, débats et une app pour ranger ta collection.">
 <meta property="og:image" content="https://backtotheculture.fr/img/partage.jpg">
 <meta property="og:url" content="https://backtotheculture.fr/">
 <meta name="theme-color" content="#17123F">
-<link rel="icon" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Archivo:wght@400;500;700;900&family=VT323&family=Press+Start+2P&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
- {"@type":"Organization","name":"LACUNA","url":"https://backtotheculture.fr/","email":"contact@backtotheculture.fr","identifier":"SIREN 891 178 402"},
+ {"@type":"Organization","name":"LACUNA","url":"https://backtotheculture.fr/","email":"contact@backtotheculture.fr","identifier":"SIREN 891 178 402","sameAs":["https://www.youtube.com/@back2theculture","https://www.instagram.com/back_2_the_culture/"]},
  {"@type":"SoftwareApplication","name":"Back To The Culture","applicationCategory":"EntertainmentApplication","operatingSystem":"Android, iOS, Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Organization","name":"LACUNA"}}
 ]}
 </script>
 <style>
-  /* Site vitrine de l'app Back To The Culture (6 oct. 2026) — identité « vidéoclub néon » de l'app */
-  :root{--nuit:#17123F;--nuit2:#211a55;--rose:#FF4FA3;--cyan:#3DD6F5;--jaune:#FFD400;--texte:#F3F0FF;--doux:#B9B3E6;}
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{background:var(--nuit)}
-  body{font-family:'Archivo',system-ui,sans-serif;color:var(--texte);background:var(--nuit);line-height:1.6;-webkit-font-smoothing:antialiased}
-  a{color:var(--cyan)}
-  a:focus-visible,button:focus-visible{outline:2px solid var(--jaune);outline-offset:3px}
-  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-  header{padding:22px 0}
-  header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
-  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--rose);font-family:'Bungee',sans-serif;font-size:18px;line-height:1;text-shadow:0 0 12px rgba(255,79,163,.6)}
-  .logo img{width:44px;height:44px;border-radius:11px}
-  .btn{display:inline-block;font-family:'Bungee',sans-serif;font-size:14px;text-decoration:none;padding:13px 20px;border-radius:12px;background:var(--jaune);color:var(--nuit);box-shadow:0 0 0 2px var(--jaune),0 8px 24px rgba(255,212,0,.25)}
-  .btn.ghost{background:transparent;color:var(--cyan);box-shadow:inset 0 0 0 2px var(--cyan)}
-  .hero{padding:40px 0 70px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
-  h1{font-family:'Bungee',sans-serif;font-weight:400;font-size:clamp(34px,5.6vw,64px);line-height:1.05;letter-spacing:.01em}
-  h1 span{display:block;color:var(--rose);text-shadow:0 0 18px rgba(255,79,163,.55)}
-  .lead{margin-top:22px;font-size:19px;color:var(--doux);max-width:34ch}
-  .actions{margin-top:30px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
-  .note{margin-top:14px;font-size:14px;color:var(--doux)}
-  .hero figure img{width:100%;max-width:380px;display:block;margin-left:auto;border-radius:28px;box-shadow:0 30px 80px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.06)}
-  section.feat{padding:70px 0;border-top:1px solid rgba(255,255,255,.07)}
-  h2{font-family:'Bungee',sans-serif;font-weight:400;font-size:clamp(24px,3.4vw,36px);line-height:1.15;color:var(--cyan)}
-  .grid{margin-top:34px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .card{background:var(--nuit2);border-radius:18px;padding:24px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
-  .card h3{font-size:18px;font-weight:800;color:var(--texte)}
-  .card p{margin-top:8px;color:var(--doux);font-size:15.5px}
-  .shots{margin-top:34px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .shots img{width:100%;border-radius:22px;display:block;box-shadow:0 18px 50px rgba(0,0,0,.4)}
-  .promise{margin-top:24px;font-size:17px;color:var(--doux);max-width:60ch}
-  footer{padding:50px 0 60px;border-top:1px solid rgba(255,255,255,.07);color:var(--doux);font-size:14px}
-  footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:28px}
-  footer h4{font-family:'Bungee',sans-serif;font-weight:400;font-size:13px;color:var(--texte);margin-bottom:10px}
-  footer p{margin-top:4px}
-  @media(max-width:860px){
-    .hero{grid-template-columns:1fr;padding-top:20px}
-    .hero figure img{margin:0 auto;max-width:300px}
-    .grid,.shots{grid-template-columns:1fr}
-    .shots img{max-width:320px;margin:0 auto}
-    footer .cols{grid-template-columns:1fr}
-  }
+/* Site Back To The Culture — charte « Vidéoclub cathodique » (oct. 2026) : cathodique = cadre, néon = marque, pixel = jeu */
+:root{--nuit:#17123F;--nuit2:#211A55;--nuit3:#2D2470;--noir:#0B0920;--neon:#FF4FA3;--cyan:#3DD6F5;--jaune:#FFD400;--ecran:#F3F0FF;--doux:#B9B3E6;--phos:#8CFFB0;
+  --f-titre:'Bungee',Impact,sans-serif;--f-txt:'Archivo',system-ui,sans-serif;--f-osd:'VT323',ui-monospace,monospace;--f-px:'Press Start 2P',ui-monospace,monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+html{background:var(--noir);scroll-behavior:smooth}
+body{font-family:var(--f-txt);color:var(--ecran);background:var(--noir);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--cyan)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--jaune);outline-offset:3px}
+img{display:block;max-width:100%}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:20px}
+.osd{font-family:var(--f-osd);letter-spacing:.04em;line-height:1}
+canvas.px{image-rendering:pixelated;image-rendering:crisp-edges;display:block}
+.scan{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.28) 0 1px,transparent 1px 3px)}
+.vign{position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 95% at 50% 50%,transparent 55%,rgba(5,3,20,.78) 100%)}
+.glow-n{text-shadow:0 0 8px rgba(255,79,163,.9),0 0 26px rgba(255,79,163,.5)}
+header{position:sticky;top:0;z-index:10;background:rgba(11,9,32,.88);backdrop-filter:blur(8px);border-bottom:2px solid var(--nuit3)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.lockup{display:flex;align-items:center;gap:12px;text-decoration:none}
+.lockup svg{width:46px;flex:none}
+.lockup .wm{display:grid;line-height:.95}
+.lockup .w1{font-family:var(--f-titre);color:var(--cyan);font-size:11px;letter-spacing:.05em}
+.lockup .w2{font-family:var(--f-titre);color:var(--neon);font-size:22px}
+nav{display:flex;gap:22px;align-items:center}
+nav a{font-family:var(--f-osd);font-size:21px;color:var(--doux);text-decoration:none}
+nav a:hover{color:var(--ecran)}
+.btn{display:inline-block;font-family:var(--f-titre);font-size:14px;text-decoration:none;padding:13px 20px;border-radius:10px;background:var(--jaune);color:var(--nuit);box-shadow:4px 4px 0 var(--neon);transition:transform .15s,box-shadow .15s;border:0;cursor:pointer}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--neon)}
+.btn.ghost{background:transparent;color:var(--cyan);box-shadow:inset 0 0 0 2px var(--cyan)}
+.btn.ghost:hover{box-shadow:inset 0 0 0 2px var(--cyan),4px 4px 0 var(--nuit3)}
+.btn.sm{font-size:12px;padding:10px 14px}
+.hero{padding-block:70px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:46px;align-items:center}
+.hero h1{font-family:var(--f-titre);font-weight:400;font-size:clamp(32px,5.2vw,62px);line-height:1.02}
+.hero h1 em{font-style:normal;color:var(--neon)}
+.hero .osd.k{font-size:22px;color:var(--phos);text-shadow:0 0 8px rgba(140,255,176,.6);margin-bottom:18px;display:block}
+.hero p{margin-top:20px;font-size:18px;color:var(--doux);max-width:46ch}
+.hero .actions{margin-top:30px;display:flex;flex-wrap:wrap;gap:14px}
+.tv{background:linear-gradient(160deg,#3a2f7a,#1b1550 60%);border-radius:30px;padding:18px;display:grid;grid-template-columns:minmax(0,1fr) 64px;gap:14px;box-shadow:0 30px 80px rgba(0,0,0,.6),inset 0 2px 0 rgba(255,255,255,.12);position:relative;margin-top:40px}
+.tv::before,.tv::after{content:"";position:absolute;top:-46px;width:4px;height:58px;background:var(--cyan);border-radius:2px;transform-origin:bottom}
+.tv::before{left:44%;transform:rotate(-28deg)}.tv::after{left:52%;transform:rotate(26deg)}
+.screen{position:relative;overflow:hidden;border-radius:7% / 10%;aspect-ratio:4/3;background:var(--noir)}
+.screen .on{position:absolute;inset:0;animation:poweron 1.5s cubic-bezier(.2,.8,.2,1) both}
+.screen .on img{width:100%;height:100%;object-fit:cover;object-position:60% 50%;filter:saturate(1.15)}
+@keyframes poweron{0%{transform:scale(1,.004);filter:brightness(5)}35%{transform:scale(1,.004);filter:brightness(5)}60%{transform:scale(1,1.04);filter:brightness(2)}100%{transform:none;filter:none}}
+.screen .tl,.screen .tr,.screen .bl{position:absolute;font-family:var(--f-osd);font-size:clamp(17px,2.2vw,26px);color:var(--phos);text-shadow:0 0 8px rgba(140,255,176,.7);z-index:2}
+.screen .tl{left:5%;top:6%}.screen .tr{right:5%;top:6%}.screen .bl{left:5%;bottom:6%}
+.side{display:grid;align-content:space-between;justify-items:center;padding-block:8px}
+.knob{width:40px;height:40px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#5b4fa8,#1a144a);box-shadow:inset 0 -3px 6px rgba(0,0,0,.5);position:relative}
+.knob::after{content:"";position:absolute;left:50%;top:5px;width:3px;height:12px;margin-left:-1.5px;border-radius:2px;background:var(--jaune)}
+.grille{display:grid;gap:5px;width:44px}.grille i{height:3px;border-radius:2px;background:rgba(0,0,0,.45)}
+.led{width:9px;height:9px;border-radius:50%;background:var(--neon);box-shadow:0 0 10px var(--neon)}
+section{padding-block:70px;border-top:2px solid var(--nuit2)}
+.shead{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.shead .num{font-family:var(--f-osd);font-size:26px;color:var(--phos);text-shadow:0 0 8px rgba(140,255,176,.6)}
+.shead h2{font-family:var(--f-titre);font-weight:400;font-size:clamp(24px,3.6vw,38px);line-height:1.1}
+.lede{max-width:60ch;color:var(--doux);font-size:17px;margin-bottom:28px}
+.chans{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.chan{background:var(--nuit);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;display:grid;align-content:start;transition:transform .15s}
+.chan:hover{transform:translateY(-4px)}
+.chan .s{margin:10px;border-radius:12px;aspect-ratio:4/3;position:relative;overflow:hidden;display:grid;place-items:center;align-content:center;gap:8px}
+.chan .s .c{position:absolute;left:9px;top:7px;font-family:var(--f-osd);font-size:20px}
+.chan .s b{font-family:var(--f-titre);font-weight:400;font-size:clamp(14px,1.6vw,18px);line-height:1.05;text-align:center;position:relative;padding:0 6px}
+.chan p{padding:2px 14px 16px;font-size:14px;color:var(--doux)}
+.videos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.vid{text-decoration:none;color:inherit;display:grid;gap:10px;align-content:start}
+.vid .p{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:16/9;box-shadow:0 0 0 3px var(--nuit3);transition:box-shadow .15s}
+.vid:hover .p{box-shadow:0 0 0 3px var(--neon),0 0 24px rgba(255,79,163,.45)}
+.vid .p img{width:100%;height:100%;object-fit:cover}
+.vid .p .play{position:absolute;left:10px;bottom:8px;font-family:var(--f-osd);font-size:18px;color:var(--phos);background:rgba(11,9,32,.8);padding:2px 6px;border-radius:4px}
+.vid .k{font-family:var(--f-osd);font-size:18px;color:var(--cyan)}
+.vid b{font-weight:700;font-size:16px;line-height:1.3}
+.more{margin-top:26px}
+.app{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:40px;align-items:center}
+.app ul{list-style:none;display:grid;gap:14px;margin-top:22px}
+.app li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;align-items:start;color:var(--doux)}
+.app li b{color:var(--ecran)}
+.shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:end}
+.shots img{border-radius:20px;box-shadow:0 18px 50px rgba(0,0,0,.45),0 0 0 2px var(--nuit3)}
+.shots img:nth-child(2){transform:translateY(-24px)}
+.xp{margin-top:26px;background:var(--nuit2);border-radius:12px;padding:14px;display:grid;gap:8px;max-width:420px}
+.xp .t{display:flex;justify-content:space-between;font-family:var(--f-px);font-size:9px;line-height:1.6}
+.xp .t span+span{color:var(--jaune)}
+.xp .bar{height:14px;border:3px solid var(--ecran);background:var(--noir);display:grid;grid-template-columns:repeat(20,1fr);gap:2px;padding:2px}
+.xp .bar i{background:var(--phos)}.xp .bar i.off{background:transparent}
+.cont{text-align:center;display:grid;gap:22px;justify-items:center}
+.cont .big{font-family:var(--f-px);font-size:clamp(20px,4vw,38px);line-height:1.4;color:var(--jaune);text-shadow:4px 4px 0 var(--neon)}
+.cont .heroes{display:flex;align-items:flex-end;gap:22px}
+.socials{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.hint{font-family:var(--f-osd);font-size:18px;color:var(--nuit3)}
+footer{border-top:2px solid var(--nuit2);padding-block:46px 56px;color:var(--doux);font-size:14px}
+footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:28px}
+footer h4{font-family:var(--f-osd);font-weight:400;font-size:20px;color:var(--ecran);margin-bottom:8px}
+footer p{margin-top:4px}
+#konami{position:fixed;inset:0;z-index:50;background:rgba(11,9,32,.94);display:grid;place-items:center;text-align:center}
+#konami[hidden]{display:none}
+#konami .box{display:grid;gap:18px;justify-items:center;padding:20px}
+#konami b{font-family:var(--f-px);font-weight:400;font-size:clamp(16px,3vw,26px);line-height:1.5;color:var(--jaune)}
+#konami p{font-family:var(--f-osd);font-size:24px;color:var(--phos)}
+#konami .h{display:flex;gap:26px;align-items:flex-end}
+#konami .h canvas{animation:hop .5s steps(2) infinite alternate}
+@keyframes hop{to{transform:translateY(-12px)}}
+@media (prefers-reduced-motion:reduce){.screen .on,#konami .h canvas{animation:none}.btn,.chan{transition:none}}
+@media (max-width:980px){.chans{grid-template-columns:repeat(3,minmax(0,1fr))}.videos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:860px){.hero,.app{grid-template-columns:minmax(0,1fr)}.hero{padding-top:40px}nav a.hide-m{display:none}footer .cols{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.chans{grid-template-columns:repeat(2,minmax(0,1fr))}.videos{grid-template-columns:minmax(0,1fr)}.tv{grid-template-columns:minmax(0,1fr);padding:12px;border-radius:22px}.side{display:none}nav{gap:14px}.lockup .w2{font-size:18px}.lockup svg{width:38px}}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="tvmark" viewBox="0 0 120 112">
+    <line x1="60" y1="24" x2="36" y2="5" stroke="#3DD6F5" stroke-width="5" stroke-linecap="round"/><line x1="60" y1="24" x2="86" y2="7" stroke="#3DD6F5" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="36" cy="5" r="5" fill="#FFD400"/><circle cx="86" cy="7" r="5" fill="#FFD400"/>
+    <rect x="6" y="24" width="108" height="82" rx="20" fill="#211A55" stroke="#FF4FA3" stroke-width="5"/>
+    <rect x="18" y="35" width="70" height="60" rx="14" fill="#0B0920" stroke="#3DD6F5" stroke-width="3"/>
+    <path d="M53 52 L35 65 L53 78 Z M75 52 L57 65 L75 78 Z" fill="#FFD400"/>
+    <circle cx="101" cy="48" r="6" fill="#3DD6F5"/><circle cx="101" cy="66" r="6" fill="#FFD400"/>
+    <rect x="95" y="80" width="12" height="3" rx="1.5" fill="#B9B3E6"/><rect x="95" y="87" width="12" height="3" rx="1.5" fill="#B9B3E6"/>
+  </symbol>
+</defs></svg>
+
 <header>
   <div class="wrap">
-    <a class="logo" href="/"><img src="img/icone.png" alt="" width="44" height="44">Back To<br>The Culture</a>
-    <a class="btn ghost" href="https://back-to-the-culture.expo.app">Ouvrir l'app</a>
+    <a class="lockup" href="/" aria-label="Back To The Culture, accueil"><svg viewBox="0 0 120 112" aria-hidden="true"><use href="#tvmark"/></svg><span class="wm"><span class="w1">BACK TO THE</span><span class="w2">CULTURE</span></span></a>
+    <nav aria-label="Navigation principale"><a href="#chaines" class="hide-m">Chaînes</a><a href="#videos" class="hide-m">Vidéos</a><a href="#app">L'app</a><a class="btn sm" href="https://www.youtube.com/@back2theculture" target="_blank" rel="noopener">S'abonner</a></nav>
   </div>
 </header>
 
 <main>
   <div class="wrap hero">
     <div>
-      <h1>Toute ta culture, <span>sur de vraies étagères</span></h1>
-      <p class="lead">BD, comics, mangas, films, séries, DVD, jeux vidéo et cartes Pokémon ou Magic : ta collection rangée sur une étagère qui ressemble enfin à la tienne.</p>
-      <div class="actions">
-        <a class="btn" href="https://back-to-the-culture.expo.app">Essayer gratuitement</a>
-      </div>
-      <p class="note">Bientôt sur Google Play et l'App Store. Gratuit, sans publicité.</p>
+      <span class="osd k">PLAY ▶ CH 00 · BACKTOTHECULTURE.FR</span>
+      <h1>La pop culture de deux <em class="glow-n">90's kids</em></h1>
+      <p>Des vidéos sur le ciné, les séries et les jeux vidéo, des débats avec ceux qui les font, et une app pour ranger ta collection sur de vraies étagères.</p>
+      <div class="actions"><a class="btn" href="https://www.youtube.com/@back2theculture" target="_blank" rel="noopener">▶ Regarder sur YouTube</a><a class="btn ghost" href="#app">Découvrir l'app</a></div>
     </div>
-    <figure><img src="img/etagere.jpg" alt="L’étagère de l’app : les tranches des BD rangées côte à côte" width="645" height="1398" fetchpriority="high"></figure>
+    <div class="tv" aria-hidden="true">
+      <div class="screen"><div class="on"><img src="img/ecran-hero.jpg" alt="" width="1280" height="720" fetchpriority="high"></div><span class="tl">PLAY ▶</span><span class="tr">CH 02</span><span class="bl">SP 00:19:94</span><div class="scan"></div><div class="vign"></div></div>
+      <div class="side"><span class="knob"></span><span class="knob"></span><span class="grille"><i></i><i></i><i></i><i></i><i></i></span><span class="led"></span></div>
+    </div>
   </div>
 
-  <section class="feat">
+  <section id="chaines">
     <div class="wrap">
-      <h2>Ce que fait l'app</h2>
-      <div class="grid">
-        <div class="card"><h3>Une vraie étagère</h3><p>Photographie une rangée de ta bibliothèque : l'app repère chaque livre, découpe sa tranche et la range dans ta collection.</p></div>
-        <div class="card"><h3>Tes cartes en classeurs</h3><p>Pokémon et Magic : un classeur par extension, chaque version à cocher, et la cote de tes cartes.</p></div>
-        <div class="card"><h3>Ce que vaut ta collection</h3><p>Prix neuf de tes BD et mangas, cote de tes cartes, prix payé : la valeur de ta collection, univers par univers.</p></div>
-        <div class="card"><h3>Ajoute en quelques secondes</h3><p>Scanne un code-barres ou cherche par titre. Importe ta collection depuis Bubble, Refract ou My Movies.</p></div>
-        <div class="card"><h3>Sais où tu en es</h3><p>Épisodes à voir, tomes à lire, jeux à finir, prochaines sorties : tout tient sur un seul écran, sans spoiler.</p></div>
-        <div class="card"><h3>Entre amis</h3><p>Suis ce que tes amis regardent et lisent, comparez vos classements. Ta collection, elle, reste privée.</p></div>
+      <div class="shead"><span class="num">CH 01-05</span><h2>Nos chaînes</h2></div>
+      <p class="lede">Chaque format a son numéro, comme les chaînes qu'on zappait le samedi matin.</p>
+      <div class="chans">
+        <a class="chan" href="https://www.youtube.com/@back2theculture/videos" target="_blank" rel="noopener"><div class="s" style="background:linear-gradient(160deg,#3a1a4f,#17123F)"><span class="c" style="color:var(--neon)">CH 01</span><canvas class="px" data-sprite="news" data-scale="4"></canvas><b>NEWS</b><div class="scan"></div></div><p>L'actu ciné, séries et jeux vidéo.</p></a>
+        <a class="chan" href="https://www.youtube.com/@back2theculture/videos" target="_blank" rel="noopener"><div class="s" style="background:linear-gradient(160deg,#123a55,#17123F)"><span class="c" style="color:var(--cyan)">CH 02</span><canvas class="px" data-sprite="loupe" data-scale="4"></canvas><b>L'ANALYSE</b><div class="scan"></div></div><p>On décortique une œuvre ou une décision.</p></a>
+        <a class="chan" href="https://www.youtube.com/@back2theculture/videos" target="_blank" rel="noopener"><div class="s" style="background:linear-gradient(160deg,#4f3a10,#17123F)"><span class="c" style="color:var(--jaune)">CH 03</span><canvas class="px" data-sprite="clap" data-scale="4"></canvas><b>CINÉ STORIES</b><div class="scan"></div></div><p>Les histoires derrière les films.</p></a>
+        <a class="chan" href="https://www.youtube.com/@back2theculture/videos" target="_blank" rel="noopener"><div class="s" style="background:linear-gradient(160deg,#173f2a,#17123F)"><span class="c" style="color:var(--phos)">CH 04</span><canvas class="px" data-sprite="micro" data-scale="4"></canvas><b>COMME À LA MAISON</b><div class="scan"></div></div><p>Les invités et les débats.</p></a>
+        <a class="chan" href="https://www.youtube.com/@back2theculture/videos" target="_blank" rel="noopener"><div class="s" style="background:linear-gradient(160deg,#4f1730,#17123F)"><span class="c" style="color:var(--neon)">CH 05</span><canvas class="px" data-sprite="card" data-scale="4"></canvas><b>BOOSTERS</b><div class="scan"></div></div><p>Ouvertures de cartes, gameplay, collection.</p></a>
       </div>
     </div>
   </section>
 
-  <section class="feat">
+  <section id="videos">
     <div class="wrap">
-      <h2>En images</h2>
-      <div class="shots">
-        <img src="img/ecran-2.jpg" alt="Suivi des épisodes d'une série, saison par saison" width="645" height="1398" loading="lazy">
-        <img src="img/ecran-3.jpg" alt="Les tomes d'une série à cocher, édition par édition" width="645" height="1398" loading="lazy">
-        <img src="img/ecran-7.jpg" alt="Les classeurs de cartes Pokémon rangés par extension" width="645" height="1398" loading="lazy">
+      <div class="shead"><span class="num">REC ●</span><h2>Les dernières vidéos</h2></div>
+      <div class="videos">
+        <a class="vid" href="https://www.youtube.com/watch?v=MLVfn_Lh6Mg" target="_blank" rel="noopener"><div class="p"><img src="img/videos/MLVfn_Lh6Mg.jpg" alt="" width="640" height="360" loading="lazy"><span class="play">▶ 10:04</span></div><span class="k">CH 02 · L'ANALYSE</span><b>Spider-Man Brand New Day : un vrai nouveau départ ?</b></a>
+        <a class="vid" href="https://www.youtube.com/watch?v=selMXCMBY5Q" target="_blank" rel="noopener"><div class="p"><img src="img/videos/selMXCMBY5Q.jpg" alt="" width="640" height="360" loading="lazy"><span class="play">▶ 03:26</span></div><span class="k">CH 01 · NEWS</span><b>Sony ferme Bluepoint Games : l'énorme gâchis de PlayStation</b></a>
+        <a class="vid" href="https://www.youtube.com/watch?v=1hL2PJJWI7w" target="_blank" rel="noopener"><div class="p"><img src="img/videos/1hL2PJJWI7w.jpg" alt="" width="640" height="360" loading="lazy"><span class="play">▶ 06:42</span></div><span class="k">CH 01 · NEWS</span><b>L'incroyable retour de Scrubs</b></a>
+        <a class="vid" href="https://www.youtube.com/watch?v=zHGdS28HZ5M" target="_blank" rel="noopener"><div class="p"><img src="img/videos/zHGdS28HZ5M.jpg" alt="" width="640" height="360" loading="lazy"><span class="play">▶ VOIR</span></div><span class="k">CH 02 · L'ANALYSE</span><b>La nouvelle série Harry Potter sera-t-elle meilleure que les films ?</b></a>
       </div>
-      <p class="promise">Sans compte, ta collection reste sur ton téléphone. Crée un compte quand tu veux pour la retrouver sur tous tes appareils. Pas de publicité, pas de revente de tes données.</p>
+      <div class="more"><a class="btn ghost" href="https://www.youtube.com/@back2theculture/videos" target="_blank" rel="noopener">Toutes les vidéos ▶</a></div>
+    </div>
+  </section>
+
+  <section id="app">
+    <div class="wrap app">
+      <div>
+        <div class="shead" style="margin-bottom:14px"><span class="num">L'APP</span><h2>Toute ta culture, sur de vraies étagères</h2></div>
+        <p class="lede" style="margin-bottom:0">BD, mangas, films, séries, DVD, jeux vidéo et cartes Pokémon ou Magic : ta collection rangée comme chez toi.</p>
+        <ul>
+          <li><canvas class="px" data-sprite="tv" data-scale="1.6"></canvas><span><b>Photographie ton étagère :</b> l'app repère chaque tranche et la range dans ta collection.</span></li>
+          <li><canvas class="px" data-sprite="card" data-scale="2.4"></canvas><span><b>Tes cartes en classeurs,</b> une extension par classeur, avec la cote de chaque carte.</span></li>
+          <li><canvas class="px" data-sprite="coin" data-scale="2.4"></canvas><span><b>Ce que vaut ta collection,</b> univers par univers.</span></li>
+          <li><canvas class="px" data-sprite="heart" data-scale="2.2"></canvas><span><b>Sans pub, sans revente de tes données.</b> Gratuit.</span></li>
+        </ul>
+        <div class="xp" aria-hidden="true"><div class="t"><span>NIVEAU 12</span><span>COLLECTIONNEUR</span></div><div class="bar" id="xpbar"></div></div>
+        <div style="margin-top:26px;display:flex;flex-wrap:wrap;gap:14px;align-items:center"><a class="btn" href="https://back-to-the-culture.expo.app">Essayer l'app</a><span class="osd" style="font-size:20px;color:var(--doux)">Bientôt sur Google Play et l'App Store</span></div>
+      </div>
+      <div class="shots">
+        <img src="img/app-episodes.jpg" alt="Suivi des épisodes d’une série dans l’app" width="645" height="1398" loading="lazy">
+        <img src="img/etagere.jpg" alt="L'étagère de l'app avec les tranches des BD" width="645" height="1398" loading="lazy">
+        <img src="img/app-classeurs.jpg" alt="Les classeurs de cartes Pokémon dans l’app" width="645" height="1398" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap cont">
+      <span class="big">CONTINUE ?</span>
+      <div class="heroes"><canvas class="px" data-sprite="hostA" data-scale="6"></canvas><canvas class="px" data-sprite="tv" data-scale="5"></canvas><canvas class="px" data-sprite="hostB" data-scale="6"></canvas></div>
+      <div class="socials"><a class="btn" href="https://www.youtube.com/@back2theculture" target="_blank" rel="noopener">▶ YouTube</a><a class="btn ghost" href="https://www.instagram.com/back_2_the_culture/" target="_blank" rel="noopener">Instagram</a></div>
+      <span class="hint">↑ ↑ ↓ ↓ ← → ← → B A</span>
     </div>
   </section>
 </main>
 
 <footer id="mentions-legales">
   <div class="wrap cols">
-    <div>
-      <h4>Back To The Culture</h4>
-      <p>Une application éditée par LACUNA, en France.</p>
-      <p>Une question, une idée ? <a href="mailto:support@backtotheculture.fr">support@backtotheculture.fr</a></p>
-    </div>
-    <div>
-      <h4>Liens</h4>
-      <p><a href="https://back-to-the-culture.expo.app">Ouvrir l'app</a></p>
-      <p><a href="https://back-to-the-culture.expo.app/confidentialite">Politique de confidentialité</a></p>
-    </div>
-    <div>
-      <h4>Mentions légales</h4>
-      <p>Éditeur : LACUNA, SASU, SIREN 891 178 402, 16 rue du Poncelet, 77700 Serris. Contact : <a href="mailto:contact@backtotheculture.fr">contact@backtotheculture.fr</a></p>
-      <p>Hébergement : GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis.</p>
-    </div>
+    <div><h4>BACK TO THE CULTURE</h4><p>La chaîne et l'app sont éditées par LACUNA, en France.</p><p>Une question, une idée ? <a href="mailto:contact@backtotheculture.fr">contact@backtotheculture.fr</a></p></div>
+    <div><h4>LIENS</h4><p><a href="https://back-to-the-culture.expo.app">Ouvrir l'app</a></p><p><a href="https://back-to-the-culture.expo.app/confidentialite">Politique de confidentialité</a></p><p><a href="mailto:support@backtotheculture.fr">Aide sur l'app</a></p></div>
+    <div><h4>MENTIONS LÉGALES</h4><p>Éditeur : LACUNA, SASU, SIREN 891 178 402, 16 rue du Poncelet, 77700 Serris.</p><p>Hébergement : GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis.</p></div>
   </div>
 </footer>
+
+<div id="konami" hidden role="dialog" aria-label="Code secret">
+  <div class="box"><b>CODE SECRET ACTIVÉ !</b><div class="h"><canvas class="px" data-sprite="hostA" data-scale="7"></canvas><canvas class="px" data-sprite="hostB" data-scale="7"></canvas></div><p>Toi aussi tu as grandi dans les 90's. Bienvenue à la maison.</p><button class="btn" id="konami-close" type="button">CONTINUE ▶</button></div>
+</div>
+
+<script>
+// Sprites pixel de la charte (une lettre = une couleur, « . » = transparent)
+(function(){
+  const P={k:'#0B0920',n:'#17123F',v:'#2D2470',p:'#FF4FA3',c:'#3DD6F5',y:'#FFD400',w:'#F3F0FF',g:'#8CFFB0',s:'#F2C3A0',S:'#D99A78',h:'#D8D5E0',H:'#8A8597',b:'#4A3B36',j:'#26203F'};
+  const S={
+   tv:["....y.....y.....",".....c...c......","......c.c.......",".......c........",".pppppppppppppp.","pvvvvvvvvvvvvvvp","pvcccccccccvvvvp","pvckkkkkkkcvcvvp","pvckkykkykcvvvvp","pvckyykyykcvyvvp","pvckkykkykcvvvvp","pvckkkkkkkcvwvvp","pvcccccccccvwvvp","pvvvvvvvvvvvvvvp",".pppppppppppppp.","..pp........pp.."],
+   hostA:["....hhhhhh......","...hhhhhhhh.....","..hhhhwhhhhh....","..hHssssssh.....","..Hsskssks......","..Hssssssss.....","..bsbbbbbsb.....","..bbbssbbbb.....","...bbbbbbb......","....bbbbb.......","...jjswwsjj.....","..jjjwwwwjjj....",".jjjjwwwwjjjj...",".jjsjwwwwjsjj...",".jj.jwwwwj.jj...","....jjjjjj......","....jj..jj......","....kk..kk......"],
+   hostB:["....pppppp......","...pppppppp.....","..pppppppppp....","..ppsssssspp....","..pskssksss.....","..psssssss......","...sssSsss......","....sssss.......","...cccccccc.....","..cccwccwccc....",".ccccccccccc....",".ccscccccccsc...",".cc.cccccc.cc...","....nnnnnn......","....nn..nn......","....kk..kk......"],
+   heart:["..kk...kk...",".kppk.kppk..","kpwppkppppk.","kpppppppppk.","kpppppppppk.",".kpppppppk..","..kpppppk...","...kpppk....","....kpk.....",".....k......"],
+   coin:["...kkkkk....","..kyyyyyk...",".kyywwyyyk..",".kywyyyyyk..",".kyyyyyyyk..",".kyyyyyyyk..",".kyyyyyywk..","..kyyyyyk...","...kkkkk...."],
+   news:[".kkkkkkkkk..",".kwwwwwwwkk.",".kwppppwwkwk",".kwwwwwwwkwk",".kwccwwwwkwk",".kwccwkkwkwk",".kwwwwwwwkwk",".kwppppppkwk",".kwwwwwwwkwk","..kkkkkkkkk."],
+   loupe:["..kkkk......",".kccwck.....","kccwccck....","kcwccccck...","kccccccck...","kccccccck...",".kccccck....","..kkkkkkk...","......kkkk..",".......kkkk.","........kk.."],
+   clap:["kkkkkkkkkk..","kwkwkwkwkk..","kkkkkkkkkk..","kyyyyyyyyk..","kykkkkkkyk..","kyyyyyyyyk..","kykkkkkyyk..","kyyyyyyyyk..","kkkkkkkkkk.."],
+   micro:["...kkkk.....","..kgggwk....","..kggggk....","..kgkkgk....","..kggggk....","k.kggggk.k..","k..kkkk..k..",".k......k...","..kkkkkk....","....kk......","...kkkk....."],
+   card:["kkkkkkkk....","kppppppk....","kpwwwwpk....","kpwyywpk....","kpyyyypk....","kpwyywpk....","kpwwwwpk....","kppppppk....","kkkkkkkk...."]
+  };
+  document.querySelectorAll('canvas[data-sprite]').forEach(cv=>{const rows=S[cv.dataset.sprite];if(!rows)return;const sc=+cv.dataset.scale||4;
+    const w=Math.max(...rows.map(r=>r.length)),h=rows.length;cv.width=w;cv.height=h;cv.style.width=(w*sc)+'px';cv.style.height=(h*sc)+'px';
+    const x=cv.getContext('2d');rows.forEach((r,yy)=>[...r].forEach((ch,xx)=>{if(P[ch]){x.fillStyle=P[ch];x.fillRect(xx,yy,1,1);}}));});
+  const bar=document.getElementById('xpbar');if(bar){for(let i=0;i<20;i++){const e=document.createElement('i');if(i>=13)e.className='off';bar.appendChild(e);}}
+  // Le code secret des 90's : ↑ ↑ ↓ ↓ ← → ← → B A
+  const code=['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];let pos=0;
+  const box=document.getElementById('konami'),close=document.getElementById('konami-close');
+  document.addEventListener('keydown',e=>{const k=e.key.length===1?e.key.toLowerCase():e.key;if(e.key==='Escape'){box.hidden=true;return;}pos=(k===code[pos])?pos+1:(k===code[0]?1:0);if(pos===code.length){pos=0;box.hidden=false;close.focus();}});
+  close.addEventListener('click',()=>{box.hidden=true;});
+})();
+</script>
 </body>
 </html>
